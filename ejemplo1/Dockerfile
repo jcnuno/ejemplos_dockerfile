@@ -7,5 +7,5 @@ RUN apt-get update && apt-get install -y apache2 && apt-get clean && rm -rf /var
 EXPOSE 80
 ADD ["index.html","/var/www/html/"]
 
-ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
